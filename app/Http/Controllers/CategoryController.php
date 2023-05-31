@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
 {
@@ -16,6 +15,7 @@ class CategoryController extends Controller
             'verify'  => false,
         ]);
         $category = json_decode($response->getBody());
+
         return view('admin.category.index', ['category' => $category]);
     }
 

@@ -1,17 +1,6 @@
 @extends('admin.admintemplate')
 
 @section('content')
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
     <div class="row">
         <div class="col-md-12 margin-tb">
           <div class="card">
@@ -26,7 +15,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>Nama kategori</label>
-                          <input type="text" name="cat_name" class="form-control">
+                          <input type="text" name="cat_name" class="form-control" required>
                         </div>
                         @error('cat_name')
                             <p class="text-danger">{{ $message }}</p>

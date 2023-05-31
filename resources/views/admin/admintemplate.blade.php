@@ -41,35 +41,28 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('posts.index') }}">
                     <i class="fas fa-fw fa-car"></i>
-                    <span>Vehicle</span></a>
+                    <span>Post</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('tags.index') }}">
                     <i class="fas fa-fw fa-id-card"></i>
-                    <span>Driver</span></a>
+                    <span>Tag</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('category.index') }}">
                     <i class="fas fa-fw fa-cart-plus"></i>
-                    <span>Order</span></a>
+                    <span>Kategori</span></a>
             </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
         </ul>
         <!-- End of Sidebar -->
 
