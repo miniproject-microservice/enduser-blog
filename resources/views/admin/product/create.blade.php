@@ -5,7 +5,7 @@
         <div class="col-md-12 margin-tb">
           <div class="card">
             <div class="card-header pb-0">
-              <h5>Tambah data kategori <span class="font-weight-bolder text-uppercase"></span></h5>
+              <h5>Tambah data produk <span class="font-weight-bolder text-uppercase"></span></h5>
             </div>
  
             <div class="card-body">
