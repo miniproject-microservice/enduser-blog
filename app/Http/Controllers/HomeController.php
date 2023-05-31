@@ -15,6 +15,13 @@ class HomeController extends Controller
             'verify'  => false,
         ]);
         $posts = json_decode($response->getBody());
-        return view('welcome', ['posts' => $posts]);
+
+        $url2 = "http://127.0.0.1:8003/api/product/index";
+        $response2 = $client->request('GET', $url2, [
+            'verify'  => false,
+        ]);
+        $product = json_decode($response2->getBody());
+
+        return view('welcome', ['posts' => $posts, 'product' => $product]);
     }
 }

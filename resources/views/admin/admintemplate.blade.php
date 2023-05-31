@@ -41,13 +41,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('posts.index') }}">
-                    <i class="fas fa-fw fa-car"></i>
-                    <span>Post</span></a>
-            </li>
-
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('tags.index') }}">
@@ -59,6 +52,20 @@
                 <a class="nav-link" href="{{ route('category.index') }}">
                     <i class="fas fa-fw fa-cart-plus"></i>
                     <span>Kategori</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('posts.index') }}">
+                    <i class="fas fa-fw fa-car"></i>
+                    <span>Post</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('product.index') }}">
+                    <i class="fas fa-fw fa-car"></i>
+                    <span>Produk</span></a>
             </li>
 
             <!-- Divider -->

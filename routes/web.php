@@ -5,7 +5,9 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +53,14 @@ Route::prefix('posts/')->name('posts.')->group(function () {
     Route::post('update/{id}', [PostsController::class, 'update'])->name('update');
     Route::get('delete/{id}', [PostsController::class, 'delete'])->name('delete');
 });
+
+Route::prefix('product/')->name('product.')->group(function () {
+    Route::get('index', [ProductController::class, 'index'])->name('index');
+    Route::get('create', [ProductController::class, 'create'])->name('create');
+    Route::post('store', [ProductController::class, 'store'])->name('store');
+    Route::get('edit/{id}', [ProductController::class, 'edit'])->name('edit');
+    Route::post('update/{id}', [ProductController::class, 'update'])->name('update');
+    Route::get('delete/{id}', [ProductController::class, 'delete'])->name('delete');
+});
+
+Route::get('pay/{id}', [OrderController::class, 'pay'])->name('pay');

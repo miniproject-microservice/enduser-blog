@@ -38,12 +38,11 @@
                         <div class="card mb-4">
                             <div class="card-block">
                             <h4 class="card-title">{{ $item->title }}</h4>
-                            <h6 class="card-subtitle text-muted">Author : {{ $item->author }}</h6>
                             <hr>
                             <p class="card-text p-y-1">{{ $item->desc }}</p>
                             <hr>
                             <a>
-                                Category : {{ $item->category }}
+                                Category : {{ $item->category->cat_name }}
                             </a>
                             <br>
                             <a> Tags : {{ $item->tags }}</a>
@@ -53,6 +52,34 @@
                 @endforeach
             </div><br>
         </div>
+
+        <div class="py-5">
+            <div class="container">
+            <center>
+                <h1><b>Daftar Produk</b></h1>
+            </center>
+            <br>
+            <div class="row hidden-md-up">
+                @foreach ($product as $product)
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-block">
+                                <h4 class="card-title">{{ $product->name }}</h4>
+                                <hr>
+                                <p class="card-text p-y-1">Rp {{ $product->price }}</p>
+                                <hr>
+                                <a> Stock : {{ $product->stock }}</a>
+                                <br>
+                                <a href="{{ route('pay', ['id' => $product->id]) }}">
+                                    <button type="button" class="btn btn-primary btn-block">Buy</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div><br>
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
         <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
